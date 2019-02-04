@@ -64,8 +64,6 @@ namespace MvcMovie.Controllers
         }
 
         // POST: Movies/Create
-        // 過多ポスティング攻撃を防止するには、バインド先とする特定のプロパティを有効にしてください。
-        // 詳細については、https://go.microsoft.com/fwlink/?LinkId=317598 を参照してください。
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
